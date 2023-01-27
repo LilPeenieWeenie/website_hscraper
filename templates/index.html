@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Rule 34 App </title>
+    </head>
+    <body>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="Search Rule 34">
+            <input type="submit" value="Submit" name="submit">
+        </form>
+        {% if images %}
+            {% for image in images %}
+                <img src="{{ image['src'] }}">
+            {% endfor %}
+        {% else %}
+            <p>No Results Found!</p>
+        {% endif %}
+    </body>
+</html>
